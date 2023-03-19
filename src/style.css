@@ -1,7 +1,67 @@
-.search_bar {
-  padding: 10px 20px;
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+#todoForm {
+  width: 50%;
+  box-shadow: 2px 2px 5px gray;
+}
+.search_bar {
+  display: flex;
+  border-bottom: 1px solid darkgray;
+}
+#todoForm input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px 20px;
+}
+.arrow_bottom_btn {
+  background: url('./assets/arrow.jpg') no-repeat center;
+  border: none;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  filter: opacity(0.3);
+}
+.arrow_bottom_btn.active {
+  filter: opacity(1);
+}
+
+#todoForm ul {
+  margin: 0;
+  padding: 0;
+}
 #todoForm ul li {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+#todoForm ul li.hidden {
+  display: none;
+}
+#todoForm ul li div:first-child {
+  display: flex;
+}
+#todoForm ul li .x_button {
+  visibility: hidden;
+  cursor: default;
+}
+#todoForm ul li:hover .x_button {
+  visibility: visible;
+}
+
+#todoForm footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.completed {
+  text-decoration-line: line-through;
+}
+.hidden {
+  visibility: hidden;
 }
